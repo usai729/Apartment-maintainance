@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans:wght@300&family=Source+Sans+Pro&display=swap");
+
+input {
+  border: 2px solid lightgray;
+  border-radius: 3px;
+}
+input:focus {
+  outline: 2px solid gray;
+  border: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+}

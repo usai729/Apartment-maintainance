@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Edit my details</title>
+
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    >
+      function editInfo(data_raw) {
+        try {
+          $(document).ready(function () {
+            $.ajax({
+              url: "http://localhost:8000/php/edit.php",
+              type: "POST",
+              //data: { greeting: "Hey", prefix: "Mr." },
+              cache: false,
+              success: function (resp) {
+                document.write(resp);
+              }
+            });
+          });
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <form action="" onsubmit="return false" id="form">
+      <input type="text" name="name" />
+      <input type="text" name="flatno" />
+
+      <button onclick="editInfo(document.getElementById('form'))">Clk</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Log In</title>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../styling/globals.css" />
+    <script src="../javascript/toggle.js"></script>
+
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .main {
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+          rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        padding: 15px;
+        border-radius: 5px;
+      }
+      input {
+        padding: 5px;
+        margin: 8px;
+      }
+      button {
+        color: #fff;
+        background-color: cornflowerblue;
+        padding: 5px;
+        margin: 5px;
+      }
+      h1 {
+        font-family: "Dancing Script", cursive;
+        font-family: "Open Sans", sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+      #spwd {
+        color: gray;
+        font-family: "Dancing Script", cursive;
+        font-family: "Open Sans", sans-serif;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 0.7rem;
+        cursor: pointer;
+        margin: 7px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <h1>Apartment Name</h1>
+      <center>
+        <form action="../php/login.php" method="post">
+          <input
+            type="number"
+            class="input"
+            placeholder="Phone number"
+            name="phno"
+            id="num"
+            required
+          /><br />
+          <input
+            type="password"
+            class="input"
+            placeholder="Password"
+            name="pwd"
+            id="pwd"
+            required
+          /><br />
+          <center>
+            <button type="submit" name="submit">LOG IN</button><br />
+            <span id="spwd" onclick="show_pwd(this, 'pwd')">Show Password</span>
+          </center>
+        </form>
+      </center>
+    </div>
+  </body>
+</html>
